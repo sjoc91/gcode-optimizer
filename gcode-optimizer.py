@@ -7,7 +7,7 @@ class GCodeParser:
         self.gcode_filename = gcode_filename
         self.z_commands = set()
         self.travel_height = None
-        self.travel_points = []
+        self.travel_points = [(0,0)] #assumes x,y have been zeroed 
         self.unique_travel_points = []
 
     def extract_unique_z_commands(self):
